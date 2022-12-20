@@ -14,7 +14,7 @@ return (
     <div>
       {
         props.data.map(data =>{
-          return<p onClick={() => {updateemp(data.id)}} style={{cursor:'pointer'}}role = "button"> {data.name} ID : {data.id} Postion: {data.department}  </p>
+          return<p key = {data.id}onClick={() => {updateemp(data.id)}} style={{cursor:'pointer'}}role = "button"> {data.name} ID : {data.id} Postion: {data.department}  </p>
         })
 
       
