@@ -1,9 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+
+
+
 const Emplist = props => {
-  return (
-    <div>Emplist</div>
+ 
+  const updateemp = (empid) =>{
+  props.setselectedemp(empid)
+  } 
+
+return (
+    <div>
+      {
+        props.data.map(data =>{
+          return<p onClick={() => {updateemp(data.id)}} style={{cursor:'pointer'}}role = "button"> {data.name} ID : {data.id} Postion: {data.department}  </p>
+        })
+
+      
+      
+      
+      }
+    </div>
   )
 }
 
