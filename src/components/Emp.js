@@ -1,7 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { useState, useEffect } from 'react';
-import axios from "axios";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -10,26 +7,27 @@ import Card from 'react-bootstrap/Card';
 const Emp = (props) => {
 
   return (
-    <div componet = {'span'}  className = "justify-content-center d-flex m-2">
+    <span className = "justify-content-center d-flex m-2">
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={props.data.photo} />
       <Card.Body>
-        <Card.Title className=''>{`${props.data.name}`}</Card.Title>
+        <Card.Title>{`${props.data.name}`}</Card.Title>
         <Card.Text>
-          <div>
-          <p>{props.data.role}</p>
-          <ul className=''>
+          <span>
+          <span>{props.data.role}</span>
+          <ul >
             <li>ID: {props.data.id}</li>
             <li>Start Date: {props.data.startDate}</li>
             <li>Department: {props.data.department}</li>
-          </ul>
-          </div>
+          </ul >
+
+          </span>
 
         </Card.Text>
         <Button onClick={props.reset} variant="primary">Go Back to list</Button>
       </Card.Body>
     </Card>
-    </div>
+    </span>
 
     
   )
